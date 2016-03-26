@@ -1,0 +1,26 @@
+{
+  "name": "fluxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "clean:js": "rm -r app/js/*",
+    "prebuild:js": "npm run clean:js",
+    "build:js": "./node_modules/webpack/bin/webpack.js",
+    "build": "npm run build:js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielddb/fluxy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielddb/fluxy/issues"
+  },
+  "homepage": "https://github.com/danielddb/fluxy#readme",
+  "devDependencies": {
+    "webpack": "^1.12.14"
+  }
+}
