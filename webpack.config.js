@@ -10,9 +10,21 @@ module.exports = {
         publicPath: __dirname
     },
     devtool: debug ? "inline-sourcemap" : null,
+    module: {
+        loaders: [
+            {
+                test: /\.jsx?$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'babel',
+                query: {
+                    presets: ['es2015']
+                }
+            }
+        ]
+    },
     plugins: debug ? [] : [
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
-    ],
+    ]
 }
