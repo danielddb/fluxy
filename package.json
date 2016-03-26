@@ -10,8 +10,10 @@
     "watch:js": "npm run build:js -- -w",
     "build": "npm run build:js",
     "server": "node server/server.js",
-    "serve": "npm run watch:js & npm run server",
-    "test": "./node_modules/karma/bin/karma start karma.conf.js"
+    "start": "npm run watch:js & npm run server",
+    "start:dev": "npm start & npm run test:watch",
+    "test": "./node_modules/karma/bin/karma start karma.conf.js",
+    "test:watch": "npm test -- --auto-watch --no-single-run"
   },
   "repository": {
     "type": "git",
