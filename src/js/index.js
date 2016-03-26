@@ -1,9 +1,8 @@
-class Test {
-    constructor() {
-        this.hello();
-    }
-    
-    hello() {
-        console.log('hello');
-    }
-}
+import React from 'react';
+import ReactDOM from 'react-dom';
+import MyComponent from './component';
+
+ReactDOM.render(
+    <MyComponent/>,
+    document.getElementById('app')
+);
