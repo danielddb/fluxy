@@ -1,9 +1,16 @@
-describe('Function', function() {
-    it('should be called once', function () {
-        var message = 'an example message';
-        var spy = sinon.spy();
-        spy();
+import React from 'react';
+import ReactTestUtils from 'react-addons-test-utils';
+import MyComponent from './component';
 
-        sinon.assert.calledOnce(spy);
+describe('MyComponent', function() {
+    it('should render into the document', function () {
+        var shallowRenderer = ReactTestUtils.createRenderer();
+        shallowRenderer.render(
+          <MyComponent/>  
+        );
+        
+        var result = shallowRenderer.getRenderOutput();
+        
+        expect(result.type).to.equal('div');
     });
 });
