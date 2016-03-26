@@ -1,3 +1,7 @@
+#Prerequisites
+
+Make sure you have the latest versions of [Node](https://nodejs.org/en/) and npm installed.
+
 #Installation
 
 ```
